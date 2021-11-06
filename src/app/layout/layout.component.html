@@ -1,0 +1,14 @@
+<div class="app-container">
+  <header class="app-header">
+    <app-navbar (setSidebarState)="toggleSidebar($event)"></app-navbar>
+  </header>
+  <main class="app-main">
+    <div class="app-main-left">
+      <app-sidebar [getSidebarState]="setSidebarState"></app-sidebar>
+    </div>
+    <div [ngClass]="setSidebarState ? 'app-main-right hidden' : 'app-main-right'">
+      <router-outlet></router-outlet>
+      <!-- <app-footer></app-footer> -->
+    </div>
+  </main>
+</div>

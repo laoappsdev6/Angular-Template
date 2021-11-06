@@ -1,0 +1,84 @@
+<div class="header">
+  <h3>Page</h3>
+</div>
+<div class="content">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let item of dataListAllPage">
+      <div class="card">
+        <div class="row">
+          <div class="col-md-10">
+            <h4>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #2196f3" *ngIf="item.id ===1"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #ffbb33" *ngIf="item.id ===2"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #9c27b0" *ngIf="item.id ===3"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #ff4444" *ngIf="item.id ===4"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #00C851 " *ngIf="item.id ===5"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #2BBBAD" *ngIf="item.id ===6"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #4285F4" *ngIf="item.id ===7"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #e91e63" *ngIf="item.id ===8"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #3f51b5 " *ngIf="item.id ===9"></i>
+              <i class="sidebar-item-icon fa fa-flag page" style="color: #02d6e6" *ngIf="item.id >=10"></i>
+              {{item.pageName}}
+            </h4>
+          </div>
+          <div class="col-md-2 edit">
+            <h3><i class="sidebar-item-icon fa fa-edit" data-toggle="modal" data-target="#addModal"
+                (click)="onClickUpdate()"></i></h3>
+          </div>
+          <div class="col-md-12">
+            <h6>Page ID: <span id="page-id">{{item.pageId}}</span></h6>
+          </div>
+          <div class="col-md-12 d-flex">
+            <h6>Page Token</h6>
+            <h6 class="time">{{ item.createdAt | date:"YYYY-MM-dd H:m:s" }}</h6>
+          </div>
+          <div class="col-md-12">
+            <textarea class="form-control" rows="6">{{item.pageToken}}</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-add" data-toggle="modal" data-target="#addModal" (click)="onClicAdd()">
+        <i class="sidebar-item-icon fa fa-plus"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 *ngIf="isModal === 'add'" class="modal-title" id="exampleModalLabel"> Add Page </h5>
+        <h5 *ngIf="isModal === 'update'" calss="modal-title" id="exampleModalLabel"> Edit Page </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>Page Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Page Name" />
+          </div>
+          <div class="form-group">
+            <label>Page ID</label>
+            <input type="text" class="form-control" id="inputID" placeholder="Page ID" />
+          </div>
+          <div class="form-group">
+            <label>Page Token</label>
+            <textarea class="form-control" id="inputToken" rows="6" placeholder="Page Token">
+              EAACgORTtlp8BAB2c07YAsXZAGXl4FXtMjZCYnEtDqENaPNsbuQ8mxGGNkTtqOAyGDbKMEU10JGh4U99rMZCOKeNLU3OnOeD6j1nZBIEUsVnS5K760MiqqjU2UlxZA4uuOZCMgNYEWlafb0SDIfzhMPJ8F2j2VYzuqOM06KAOK2tibuXPj6Sw0HZCBOBTfL8h1iEumP9eU7urwZDZD</textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+        <button type="button" class="btn btn-primary" *ngIf="isModal === 'add'" (click)="insertData()">Save</button>
+        <button type="button" class="btn btn-primary" *ngIf="isModal === 'update'">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

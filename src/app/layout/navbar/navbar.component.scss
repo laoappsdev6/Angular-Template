@@ -1,0 +1,76 @@
+$primary-bt3-color: #337AB7;
+$primary-bt3-hover-color: #286090;
+$danger-bg3-color: #D9534F;
+$danger-bt3-hover-color: #C9302C;
+$info-bt3-color: #5BC0DE;
+$info-bt3-hover-color: #31B0D5;
+$success-bt3-color: #5CB85C;
+$success-bt3-hover-color: #449D44;
+$warning-bt3-color: #F0AD4E;
+$warning-bt3-hover-color: #EC971F;
+$default-bt3-color: #FFFFFF;
+$default-bt3-hover-color: #E6E6E6;
+$basic-bt3-color: #EFEFEF;
+$basic-bt3-hover-color: #EFEFEF;
+$dark-bt3-color: #343A40;
+$dark-bt3-hover-color: #23272B;
+$lao-color:#fd0000;
+$app-color:#ffa600;
+$nav-color:#31B0D5;
+
+.navbar-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  line-height: 55px;
+  background: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  z-index: 100;
+
+  .navbar-navigation-logo.lg {
+    background: $dark-bt3-color;
+    width: 250px;
+    float: left;
+    height: 55px;
+    text-align: center;
+    color: #fff;
+    transition: .2s;
+  }
+
+  .navbar-navigation-logo.sm {
+    background: $dark-bt3-color;
+    width: 50px;
+    float: left;
+    height: 55px;
+    text-align: center;
+    color: #fff;
+    transition: .2s;
+  }
+
+  .navbar-navigation-toggle-sidebar {
+    float: left;
+    width: 50px;
+    text-align: center;
+
+    .toggle-sidebar {
+      color: $dark-bt3-color;
+    }
+  }
+}
+
+.full,
+.short {
+  font-size: 25px;
+  font-weight: bold;
+
+  p {
+    color: $lao-color;
+  }
+
+  span {
+    color: $app-color;
+  }
+}

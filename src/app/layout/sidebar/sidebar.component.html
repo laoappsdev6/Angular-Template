@@ -1,0 +1,50 @@
+<aside [ngClass]="getSidebarState ? 'sidebar-navigation hidden' : 'sidebar-navigation'">
+  <a routerLink="./pages/dashboard" [ngClass]="routerPath ==='dashboard'?'sidebar-link active':'sidebar-link'"
+    (click)="onRoutes('dashboard')" id="dashboard">
+    <div class="icon">
+      <i class="fas fa-igloo"></i>
+    </div>
+    <div class="title"> Dashboard </div>
+  </a>
+  <div
+    [ngClass]="getSidebarState ? 'text-muted sidebar-navigation-section hidden' : 'text-muted sidebar-navigation-section'">
+    FEATURES</div>
+  <a routerLink="./pages/page" [ngClass]="routerPath ==='page'?'sidebar-link active':'sidebar-link'"
+    (click)="onRoutes('page')">
+    <div class="icon">
+      <i class="fas fa-flag"></i>
+    </div>
+    <div class="title"> Page </div>
+  </a>
+  <a routerLink="./pages/posts" [ngClass]="routerPath ==='posts'?'sidebar-link active':'sidebar-link'"
+    (click)="onRoutes('posts')">
+    <div class="icon">
+      <i class="fas fa-images"></i>
+    </div>
+    <div class="title"> Posts </div>
+  </a>
+  <a routerLink="./pages/customer" [ngClass]="routerPath ==='customer'?'sidebar-link active':'sidebar-link'"
+    (click)="onRoutes('customer')">
+    <div class="icon">
+      <i class="fas fa-user-friends"></i>
+    </div>
+    <div class="title"> Customer </div>
+  </a>
+  <a routerLink="./pages/comment" [ngClass]="routerPath ==='comment'?'sidebar-link active':'sidebar-link'"
+    (click)="onRoutes('comment')">
+    <div class="icon">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="title"> Comment </div>
+  </a>
+  <div
+    [ngClass]="getSidebarState ? 'text-muted sidebar-navigation-section hidden' : 'text-muted sidebar-navigation-section'">
+    SYSTEM</div>
+  <a routerLink="./pages/user" [ngClass]="routerPath ==='user'?'sidebar-link active':'sidebar-link'"
+    (click)="onRoutes('user')">
+    <div class="icon">
+      <i class="fas fa-user-tie"></i>
+    </div>
+    <div class="title"> User </div>
+  </a>
+</aside>

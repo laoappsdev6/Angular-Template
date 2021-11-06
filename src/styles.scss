@@ -1,0 +1,53 @@
+$body-color:#f0f0f0;
+$info-color:#33b5e5;
+$success-color:#00C851;
+$warning-color:#ffbb33;
+$danger-color:#ff4444;
+$default-color:#2BBBAD;
+$primary-color:#4285F4;
+$secondary-color:#aa66cc;
+
+* {
+  // font-family: "BoonHome", sans-serif;
+  font-family: "Bahnschrift", sans-serif;
+}
+
+body {
+  background-color: $body-color;
+}
+
+
+
+// pagination
+.preloader-backdrop {
+  background-color: transparent;
+}
+
+.page-preloader {
+  background-color: #fff;
+  box-shadow: 0 5px 20px #d6dee4;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 5px 13px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.pagination a.active {
+  background-color: #33b5e5;
+  color: white;
+  border: 1px solid #33b5e5;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}

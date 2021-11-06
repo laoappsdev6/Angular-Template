@@ -1,0 +1,97 @@
+$primary-bt3-color: #337AB7;
+$primary-bt3-hover-color: #286090;
+$danger-bg3-color: #D9534F;
+$danger-bt3-hover-color: #C9302C;
+$info-bt3-color: #5BC0DE;
+$info-bt3-hover-color: #31B0D5;
+$success-bt3-color: #5CB85C;
+$success-bt3-hover-color: #449D44;
+$warning-bt3-color: #F0AD4E;
+$warning-bt3-hover-color: #EC971F;
+$default-bt3-color: #FFFFFF;
+$default-bt3-hover-color: #E6E6E6;
+$basic-bt3-color: #EFEFEF;
+$basic-bt3-hover-color: #EFEFEF;
+$dark-bt3-color: #343A40;
+$dark-bt3-hover-color: #23272B;
+
+.sidebar-navigation {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background: $dark-bt3-color;
+  overflow: hidden;
+  transition: .2s;
+
+  .sidebar-navigation-section {
+    height: 45px;
+    line-height: 45px;
+    width: 250px;
+    font-size: 16px;
+    padding-left: 15px;
+    transition: .2s;
+    overflow: hidden;
+  }
+
+  .sidebar-navigation-section.hidden {
+    height: 0;
+  }
+
+
+  #dashboard {
+    height: 55px;
+    line-height: 55px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .2s;
+    opacity: .7;
+    width: 250px;
+    // background: red;
+
+    .icon {
+      width: 50px;
+      text-align: center;
+    }
+  }
+
+  .sidebar-link {
+    height: 40px;
+    line-height: 40px;
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: .2s;
+    opacity: .7;
+    width: 250px;
+
+    .icon {
+      width: 50px;
+      text-align: center;
+    }
+  }
+
+  .sidebar-link.active {
+    opacity: 1;
+    color: #fff;
+    background: $primary-bt3-color;
+    width: 250px;
+  }
+
+  .sidebar-link:hover {
+    opacity: 1;
+    background-color: $info-bt3-hover-color;
+  }
+
+  // .sidebar-link:focus-within {
+  //   background-color: $primary-bt3-color;
+  // }
+}
+
+.sidebar-navigation.hidden {
+  width: 50px;
+}

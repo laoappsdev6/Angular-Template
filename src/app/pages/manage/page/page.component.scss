@@ -1,0 +1,76 @@
+.card {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 3px #e6e6e6;
+  margin-bottom: 30px;
+  border: none;
+
+  .d-flex {
+
+    justify-content: space-between;
+  }
+}
+
+.token {
+  margin-top: 5px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.page {
+  color: #1074c5;
+}
+
+.edit {
+  text-align: right;
+  color: rgb(3, 168, 3);
+}
+
+.fa-edit:hover {
+  /* font-size: 30px; */
+  color: rgb(0, 255, 0);
+}
+
+.fa-edit:active {
+  /* font-size: 30px; */
+  color: rgb(0, 12, 0);
+}
+
+#page-id {
+  text-align: right;
+  /* color: #33b5e5; */
+  color: #f00a7d;
+}
+
+.time {
+  text-align: right;
+  color: #7e7d7d;
+}
+
+.card-add {
+  padding-top: 100px;
+  height: 270px;
+  // margin-top: 30px;
+  // margin-left: 130px;
+  // margin-right: 130px;
+  text-align: center;
+  font-size: 70px;
+  background-color: #f1f1f1;
+  color: rgb(151, 151, 151);
+}
+
+
+.card-add:hover {
+  color: #858585;
+  box-shadow: 0px 2px 5px 3px #c2c2c2;
+
+}
+
+.card-add:active {
+  font-size: 70px;
+  color: #4d4d4d;
+}
+
+#inputToken {
+  border-radius: 5px;
+}

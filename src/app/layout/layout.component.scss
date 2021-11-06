@@ -1,0 +1,19 @@
+.app-container {
+
+  .app-main {
+    padding-top: 70px;
+    display: flex;
+    padding-right: 15px;
+    padding-bottom: 20px;
+
+    .app-main-right {
+      width: 100%;
+      transition: .2s;
+      margin-left: 265px;
+    }
+
+    .app-main-right.hidden {
+      margin-left: 65px;
+    }
+  }
+}

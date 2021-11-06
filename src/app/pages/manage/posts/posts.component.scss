@@ -1,0 +1,50 @@
+$comment-icon-color:#1080ff;
+
+.panel {
+  .header {
+    padding-top: 10px;
+    margin-bottom: -10px;
+  }
+}
+
+.card-post {
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px 3px #c9c9c9;
+  margin-bottom: 30px;
+  border: none;
+
+  .comment {
+    color: $comment-icon-color;
+    font-size: 40px;
+    text-align: right;
+  }
+
+  .postId {
+    font-size: 18px;
+  }
+
+  .type {
+    span {
+      color: #0ab326;
+    }
+  }
+
+  .d-flex {
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .time {
+      color: #979696;
+    }
+  }
+
+  .content {
+    color: #979696;
+
+  }
+}
+
+.modal-close {
+  justify-content: space-between;
+}

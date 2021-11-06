@@ -1,0 +1,419 @@
+<!-- <div class="header">
+  <h3>Customer</h3>
+</div> -->
+<div class="ticket">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card customer-all">
+        <div class="row">
+          <div class="col-md-6 number-all">
+            <p>200</p>
+          </div>
+          <div class="col-md-6 icon-all">
+            <i class="fa fa-users"></i>
+          </div>
+          <div class="col-md-12">
+            <h4>Customer</h4>
+            <p><i class="fas fa-sort-numeric-up"></i> <span id="description"> Total customer</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card customer-comment">
+        <div class="row">
+          <div class="col-md-6 number-all">
+            <p>100</p>
+          </div>
+          <div class="col-md-6 icon-all">
+            <i class="fa fa-comment-dots"></i>
+          </div>
+          <div class="col-md-12">
+            <h4>Comment</h4>
+            <p><i class="fas fa-sort-numeric-up"></i> <span id="description"> Customer comment</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card customer-no-comment">
+        <div class="row">
+          <div class="col-md-6 number-all">
+            <p>25</p>
+          </div>
+          <div class="col-md-6 icon-all">
+            <i class="fa fa-comment"></i>
+          </div>
+          <div class="col-md-12">
+            <h4>No Activity</h4>
+            <p><i class="fas fa-sort-numeric-up"></i> <span id="description"> Customer no activity</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card customer-message">
+        <div class="row">
+          <div class="col-md-6 number-all">
+            <p>25</p>
+          </div>
+          <div class="col-md-6 icon-all">
+            <i class="fab fa-facebook-messenger"></i>
+          </div>
+          <div class="col-md-12">
+            <h4>Message</h4>
+            <p><i class="fas fa-sort-numeric-up"></i> <span id="description"> customer inbox</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header bg-black font-weight-bold">
+          <div class="row">
+            <div class="col-md-8">
+              <h3>Customer</h3>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Username"
+                  aria-describedby="basic-addon1">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Description</th>
+                <th>DateTime Create</th>
+                <th>Manage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nicky</td>
+                <td>258391457</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()">
+                    <i class="fa fa-edit"></i> &nbsp;Update </button>
+                  <button class="btn btn-delete" (click)="confirmDelete()">
+                    <i class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Khamlar</td>
+                <td>874561254455</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <!--Facebook-->
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Sinxay</td>
+                <td>451468471654</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class=" btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Sithikone</td>
+                <td>564697844516</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Kama</td>
+                <td>549874564656</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Ola</td>
+                <td>3654564982135</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Nam</td>
+                <td>5465412535165</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Make</td>
+                <td>4654154568454</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Bounthan</td>
+                <td>654564352416</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>Satamjai</td>
+                <td>5634623456498445</td>
+                <td>new customer</td>
+                <td>2021-10-12 20:00</td>
+                <td>
+                  <button class="btn btn-update" data-toggle="modal" data-target="#addModal" (click)="onUpdate()"><i
+                      class="fa fa-edit"></i> &nbsp;Update</button>
+                  <button class="btn btn-delete" (click)="confirmDelete()"><i
+                      class="fa fa-trash"></i>&nbsp;Delete</button>
+                  <button class="btn btn-comment" data-toggle="modal" data-target="#listModal"><i
+                      class="fa fa-comment-alt"></i>&nbsp;Comment</button>
+                  <a type="button" id="msg" mdbBtn floating="true" size="sm" color="fb" class=" waves-light"
+                    mdbWavesEffect href="https://www.facebook.com/Ps-Channel-102382324951109/inbox" target="_blank"><i
+                      class="fab fa-facebook-messenger"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a href="#" class="active">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">&raquo;</a>
+              </div>
+            </div>
+            <div class="col-md-6 add">
+              <button class="btn btn-info" data-toggle="modal" data-target="#addModal" (click)="onAdd()">Add
+                Customer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal add and update -->
+  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 *ngIf="isModal === 'add'" class="modal-title" id="exampleModalLabel"> Add Customer </h5>
+          <h5 *ngIf="isModal === 'update'" calss="modal-title" id="exampleModalLabel"> Edit Customer </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Customer Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Customer Name" />
+            </div>
+            <div class="form-group">
+              <label>Customer ID</label>
+              <input type="text" class="form-control" id="inputID" placeholder="Customer ID" />
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <textarea class="form-control" id="inputToken" rows="2" placeholder="Description"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onInsert()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal list comment by customer -->
+<div class="modal fade" id="listModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="col-md-8">
+          <h5><i class="sidebar-item-icon fa fa-user page" style="color: #33b5e5 "></i> Nicky</h5>
+        </div>
+        <div class="col-md-">
+          <div class="input-group mb-1">
+            <input type="text" class="form-control" placeholder="Search..." aria-label="Username"
+              aria-describedby="basic-addon1">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Comment Text</th>
+              <th>Comment ID</th>
+              <th>Time</th>
+              <th>Posts ID</th>
+              <th>Page</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CF 123</td>
+              <td>569846546845346</td>
+              <td>2021-10-12 20:00</td>
+              <td>81274091237409178</td>
+              <td>Hangmi</td>
+            </tr>
+            <tr>
+              <td>Hello</td>
+              <td>569846546845346</td>
+              <td>2021-10-12 20:00</td>
+              <td>81274091237409178</td>
+              <td>Hangmi</td>
+            </tr>
+            <tr>
+              <td>I love you</td>
+              <td>569846546845346</td>
+              <td>2021-10-12 20:00</td>
+              <td>81274091237409178</td>
+              <td>Hangmi</td>
+            </tr>
+            <tr>
+              <td>help me please</td>
+              <td>569846546845346</td>
+              <td>2021-10-12 20:00</td>
+              <td>81274091237409178</td>
+              <td>Hangmi</td>
+            </tr>
+            <tr>
+              <td>Style</td>
+              <td>569846546845346</td>
+              <td>2021-10-12 20:00</td>
+              <td>81274091237409178</td>
+              <td>Hangmi</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="d-flex modal-close">
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">&raquo;</a>
+          </div>
+          <div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

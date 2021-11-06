@@ -1,0 +1,124 @@
+$btn-shadow-color:#b3b3b3;
+$btn-update-color:#00C851;
+$btn-delete-color:#ff4444;
+$btn-comment-color:#33b5e5;
+$btn-message-color:#0d47a1;
+$white-color:#ffffff;
+
+.card,
+table {
+  box-shadow: 0px 0.5px 2px 1px #e9e9e9;
+}
+
+.card-header {
+  padding-top: 25px;
+}
+
+.card-footer {
+  padding-top: 20px;
+  //   margin-bottom: -20px;
+}
+
+
+.add {
+  text-align: right;
+}
+
+.btn-update,
+.btn-delete,
+.btn-comment {
+  margin-right: 5px;
+  box-shadow: 0px 1px 2px 1px $btn-shadow-color;
+  background-color: $white-color;
+
+}
+
+.btn-update {
+  border-color: $btn-update-color;
+  color: $btn-update-color;
+}
+
+.btn-delete {
+
+  border-color: $btn-delete-color;
+  color: $btn-delete-color;
+}
+
+.btn-comment {
+  border-color: $btn-comment-color;
+  color: $btn-comment-color;
+}
+
+.customer-all,
+.customer-comment,
+.customer-no-comment,
+.customer-message {
+  border: none;
+  margin-bottom: 25px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 0px 2px 6px 3px #afaeae;
+  width: 100%;
+  height: 130px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+
+  h4 {
+    margin-top: -20px;
+  }
+
+  .number-all {
+    font-size: 40px;
+  }
+
+  .icon-all {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 55px;
+    margin-bottom: -15px;
+  }
+}
+
+.customer-all {
+  background-image: linear-gradient(to bottom, #abdef1, #33b5e5);
+
+}
+
+.customer-comment {
+
+  background-image: linear-gradient(to bottom, #b1f8cf, #00C851);
+}
+
+.customer-no-comment {
+  background-image: linear-gradient(to bottom, #f8b2b2, #ff4444);
+}
+
+
+.customer-message {
+  background-image: linear-gradient(to bottom, #a0c1f5, #2978f7);
+}
+
+
+
+#description {
+  color: #e0e0e0;
+}
+
+#msg {
+  font-size: 35px;
+  margin-top: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  i {
+    padding-left: 15px;
+    padding-top: 5px;
+    position: relative;
+    top: 10px;
+  }
+}
+
+.d-flex {
+  justify-content: space-between;
+}
